@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faime Red Luxury</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#000;color:#fff;padding-bottom:20px}
+#splash{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;animation:splashHide 0.5s ease 6.5s forwards}
+@keyframes splashHide{to{opacity:0;visibility:hidden}}
+#splashNum{font-size:90px;color:#d4af37;font-weight:bold;line-height:1}
+#splashText{font-size:20px;color:#fff;margin-top:12px;width:100%}
+#skipBtn{margin-top:20px;background:#d4af37;color:#000;border:none;padding:12px 25px;border-radius:25px;font-weight:bold;font-size:16px}
+header{text-align:center;padding:18px 12px}
+header .top{color:#d4af37;font-size:15px;font-weight:bold}
+header h1{font-size:20px;margin-top:4px}
+.g4sBadge{background:#d4af37;color:#000;font-weight:bold;padding:8px;border-radius:20px;display:inline-block;margin-top:8px;font-size:13px}
+.box2{background:#0a0a0a;border:1px solid #d4af37;border-radius:18px;margin:12px;padding:18px;text-align:center}
+.box2 h2{font-size:20px;margin-bottom:12px;color:#fff}
+.box2 select{width:100%;padding:14px;border-radius:25px;border:none;text-align:center;font-size:16px;font-weight:bold;background:#fff;color:#000}
+.box2 input{width:100%;padding:14px;border-radius:25px;border:none;text-align:center;font-size:16px;font-weight:bold;margin-top:10px;background:#fff;color:#000}
+.box2 button{width:100%;padding:14px;margin-top:12px;border-radius:25px;border:none;background:#d4af37;color:#000;font-weight:bold;font-size:18px;cursor:pointer}
+.small{font-size:13px;color:#aaa;margin-top:8px}
+.grid{display:block;padding:12px}
+.card{background:#111;color:#fff;border:1px solid #333;border-radius:18px;overflow:hidden;text-align:center;padding-bottom:16px;margin-bottom:16px}
+.card img{width:100%;height:320px;object-fit:cover;display:block}
+.card h3{margin:12px 5px 6px;font-size:22px;color:#fff}
+.priceRow{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap}
+.price{color:#ff5c5c;font-weight:bold;font-size:22px}
+.lx{background:#222;border:1px solid #d4af37;padding:4px 10px;border-radius:15px;font-weight:bold;font-size:14px;color:#d4af37}
+.details{font-size:15px;line-height:1.8;padding:8px 10px;color:#ddd}
+.total{color:#ff5c5c;font-weight:bold;font-size:18px}
+.g4sTag{background:#1a1a1a;border:1px solid #d4af37;color:#d4af37;padding:8px 12px;border-radius:12px;display:inline-block;margin-top:8px;font-size:13px;line-height:1.5}
+.orderBtn{background:#d4af37;color:#000;border:none;padding:14px 8px;border-radius:25px;font-weight:bold;font-size:16px;width:92%;cursor:pointer;margin-top:8px}
+.waBtn{background:#25D366;color:white;border:none;padding:14px 8px;border-radius:25px;font-weight:bold;font-size:16px;width:92%;cursor:pointer;margin-top:10px}
+.boxW{background:#111;margin:12px;padding:18px;border-radius:15px;border:1px solid #333;color:#fff}
+.boxW h2{color:#d4af37;margin-bottom:10px;font-size:19px}
+.boxW input,.boxW select{width:100%;padding:12px;margin:8px 0;border-radius:10px;border:1px solid #444;background:#fff;color:#000;font-size:15px}
+.btnG{background:#d4af37;color:#000;padding:12px;border:none;border-radius:20px;font-weight:bold;width:100%;cursor:pointer}
+.btnW{background:#25D366;color:white;padding:10px 14px;border-radius:20px;text-decoration:none;display:inline-block;font-weight:bold;margin-top:8px;font-size:14px}
+footer{text-align:center;padding:16px;font-size:13px;color:#aaa}
+#trackResult{display:none;background:#fff;color:#000;padding:14px;border-radius:12px;margin-top:12px;text-align:left}
+.dots{display:flex;justify-content:space-between;margin:14px 0 6px;text-align:center;font-size:11px;color:#000}
+.dot{width:28px;height:28px;border-radius:50%;margin:0 auto 4px}
+.green{background:#22c55e}.gold{background:#d4af37}.grey{background:#ccc}
+#orderBox{display:none;background:#fff;color:#000;padding:12px;border-radius:10px;margin-top:12px;text-align:center}
+.sendBtn{background:#25D366;color:white;border:none;padding:14px 15px;border-radius:25px;font-weight:bold;font-size:16px;width:100%;cursor:pointer;margin-top:10px}
+</style>
+</head>
+<body>
+
+<div id="splash" onclick="closeSplash()">
+<div id="splashNum">5</div>
+<div id="splashText">Karibu Faime Red Luxury...</div>
+<button id="skipBtn">SKIP - INGIA SASA</button>
+<p style="font-size:12px;color:#aaa;margin-top:10px">Gusa popote kuingia</p>
+</div>
+
+<header>
+<div class="top">Avai Malkia | I LOVE PEOPLE</div>
+<h1>FAIMEREDLUXURY Collection</h1>
+<p style="font-size:13px;margin-top:5px">Nakuru Kabazi | WhatsApp: +254 729 707758</p>
+<div class="g4sBadge">DELIVERY DONE BY G4S - FAST & SAFE</div>
+</header>
+
+<div class="box2">
+<h2>WHERE ARE YOU? CHAGUA LOCATION YAKO</h2>
+<select id="locSelect" onchange="changeLoc()">
+<option value="100" data-name="Nakuru Town">Nakuru Town - Delivery KSh 100</option>
+<option value="150" data-name="Nakuru Kabazi" selected>Nakuru Kabazi - Delivery KSh 150</option>
+<option value="200" data-name="Nairobi">Nairobi - Delivery KSh 200</option>
+<option value="250" data-name="Eldoret">Eldoret - Delivery KSh 250</option>
+<option value="250" data-name="Kisumu">Kisumu - Delivery KSh 250</option>
+<option value="300" data-name="Mombasa">Mombasa - Delivery KSh 300</option>
+<option value="300" data-name="Kisii">Kisii - Delivery KSh 300</option>
+<option value="200" data-name="Naivasha">Naivasha - Delivery KSh 200</option>
+<option value="200" data-name="Kericho">Kericho - Delivery KSh 200</option>
+<option value="350" data-name="Upcountry - Other">Upcountry - Other - Delivery KSh 350</option>
+</select>
+<p class="small">Chagua location kwanza, ndio uone jumla ya kulipa.</p>
+<p class="small">Location uliyochagua: <b id="locName" style="color:#d4af37">Nakuru Kabazi</b></p>
+</div>
+
+<div class="box2">
+<h2>TRACK YOUR ORDER - G4S</h2>
+<p style="font-size:13px;color:#ddd">Weka Order Number yako hapa, uone mzigo wako umefika wapi</p>
+<input id="trackInput" placeholder="LX-278560" value="LX-278560">
+<button onclick="track()">TRACK ORDER - G4S</button>
+<div id="trackResult"></div>
+<p style="font-size:12px;color:#aaa;margin-top:10px">Delivery Done By G4S | Kabazi - Nakuru - Nairobi - Kenya Mzima</p>
+</div>
+
+<div class="grid">
+
+<div class="card" data-base="1100" data-lx="LX-206069" data-name="Kids Dress">
+<img src="https://i.ibb.co/60fzKPh6/dress.jpg">
+<h3>Kids Dress</h3>
+<div class="priceRow"><span class="price">KSh 1,100</span> <span class="lx">LX-206069</span></div>
+<div class="details">Bei: KSh 1,100<br>Parcel (<span class="locShow">Nakuru Kabazi</span>): KSh <span class="delPrice">150</span><br><span class="total">JUMLA YA KULIPA: KSh <span class="totalPrice">1,250</span></span><br><span class="g4sTag">DELIVERY DONE BY G4S<br>Salama, Haraka, Inafuatiliwa</span></div>
+<button class="orderBtn" onclick="orderThis(this)">ORDER NOW - KSh <span class="btnTotal">1,250</span></button>
+<button class="waBtn" onclick="orderThis(this)">ORDER VIA WHATSAPP</button>
+</div>
+
+<div class="card" data-base="900" data-lx="LX-278560" data-name="Black Fur Handbag">
+<img src="https://i.ibb.co/YBmyMB3C/black.jpg">
+<h3>Black Fur Handbag</h3>
+<div class="priceRow"><span class="price">KSh 900</span> <span class="lx">LX-278560</span></div>
+<div class="details">Bei: KSh 900<br>Parcel (<span class="locShow">Nakuru Kabazi</span>): KSh <span class="delPrice">150</span><br><span class="total">JUMLA YA KULIPA: KSh <span class="totalPrice">1,050</span></span><br><span class="g4sTag">DELIVERY DONE BY G4S<br>Salama, Haraka, Inafuatiliwa</span></div>
+<button class="orderBtn" onclick="orderThis(this)">ORDER NOW - KSh <span class="btnTotal">1,050</span></button>
+<button class="waBtn" onclick="orderThis(this)">ORDER VIA WHATSAPP</button>
+</div>
+
+<div class="card" data-base="900" data-lx="LX-305020" data-name="White Fur Handbag">
+<img src="https://i.ibb.co/JRRG5DHx/white.jpg">
+<h3>White Fur Handbag</h3>
+<div class="priceRow"><span class="price">KSh 900</span> <span class="lx">LX-305020</span></div>
+<div class="details">Bei: KSh 900<br>Parcel (<span class="locShow">Nakuru Kabazi</span>): KSh <span class="delPrice">150</span><br><span class="total">JUMLA YA KULIPA: KSh <span class="totalPrice">1,050</span></span><br><span class="g4sTag">DELIVERY DONE BY G4S<br>Salama, Haraka, Inafuatiliwa</span></div>
+<button class="orderBtn" onclick="orderThis(this)">ORDER NOW - KSh <span class="btnTotal">1,050</span></button>
+<button class="waBtn" onclick="orderThis(this)">ORDER VIA WHATSAPP</button>
+</div>
+
+<div class="card" data-base="300" data-lx="LX-445566" data-name="Colorful Tote Bag">
+<img src="https://i.ibb.co/1f4Jrbb7/tote.jpg">
+<h3>Colorful Tote Bag</h3>
+<div class="priceRow"><span class="price">KSh 300</span> <span class="lx">LX-445566</span></div>
+<div class="details">Bei: KSh 300<br>Parcel (<span class="locShow">Nakuru Kabazi</span>): KSh <span class="delPrice">150</span><br><span class="total">JUMLA YA KULIPA: KSh <span class="totalPrice">450</span></span><br><span class="g4sTag">DELIVERY DONE BY G4S<br>Salama, Haraka, Inafuatiliwa</span></div>
+<button class="orderBtn" onclick="orderThis(this)">ORDER NOW - KSh <span class="btnTotal">450</span></button>
+<button class="waBtn" onclick="orderThis(this)">ORDER VIA WHATSAPP</button>
+</div>
+
+<div class="card" data-base="350" data-lx="LX-778899" data-name="Throw Pillow Cover">
+<img src="https://i.ibb.co/v6kH8fKp/pillow.jpg">
+<h3>Throw Pillow Cover</h3>
+<div class="priceRow"><span class="price">KSh 350</span> <span class="lx">LX-778899</span></div>
+<div class="details">Bei: KSh 350<br>Parcel (<span class="locShow">Nakuru Kabazi</span>): KSh <span class="delPrice">150</span><br><span class="total">JUMLA YA KULIPA: KSh <span class="totalPrice">500</span></span><br><span class="g4sTag">DELIVERY DONE BY G4S<br>Salama, Haraka, Inafuatiliwa</span></div>
+<button class="orderBtn" onclick="orderThis(this)">ORDER NOW - KSh <span class="btnTotal">500</span></button>
+<button class="waBtn" onclick="orderThis(this)">ORDER VIA WHATSAPP</button>
+</div>
+
+</div>
+
+<div class="boxW">
+<h2>Tengeneza Order Number Yako</h2>
+<input id="cname" placeholder="Jina lako">
+<input id="cloc" placeholder="Location yako - mfano: Nakuru Kabazi">
+<select id="cprod">
+<option>Kids Dress - KSh 1,100</option>
+<option>Black Fur Handbag - KSh 900</option>
+<option>White Fur Handbag - KSh 900</option>
+<option>Colorful Tote Bag - KSh 300</option>
+<option>Throw Pillow Cover - KSh 350</option>
+</select>
+<button class="btnG" onclick="makeOrder()">Tengeneza Order Number</button>
+<div id="orderBox"></div>
+</div>
+
+<div class="boxW">
+<h2>Location and Delivery - G4S</h2>
+<p>Shop Location: <b>Nakuru Kabazi, Nakuru County</b></p>
+<p style="margin-top:8px"><b>DELIVERY DONE BY G4S</b></p>
+<p>Nakuru Town: KSh 100 | Nakuru Kabazi: KSh 150 | Nairobi: KSh 200</p>
+<p>Eldoret / Kisumu: KSh 250 | Mombasa / Kisii: KSh 300</p>
+<p>Ukitrack order yako, utaona mzigo umefika wapi: Kabazi - Nakuru Hub - Kwa Njia - Imefika Kwako</p>
+<a class="btnW" href="https://maps.google.com/?q=Kabazi,Nakuru,Kenya" target="_blank">Fungua Location Kwa Map</a>
+<a class="btnW" href="https://wa.me/254729707758?text=Hi! I want to know delivery to my location">Uliza Delivery - G4S</a>
+</div>
+
+<footer>
+<p>Faime Red Luxury 2026 | Made With Love | Nakuru Kabazi</p>
+<p>WhatsApp: +254 729 707758 | Delivery Done By G4S</p>
+</footer>
+
+<script>
+function closeSplash(){
+document.getElementById("splash").style.display="none";
+}
+let c = 5;
+let splashNum = document.getElementById("splashNum");
+let splashText = document.getElementById("splashText");
+setTimeout(function(){ splashNum.innerText="4"; }, 1000);
+setTimeout(function(){ splashNum.innerText="3"; }, 2000);
+setTimeout(function(){ splashNum.innerText="2"; }, 3000);
+setTimeout(function(){ splashNum.innerText="1"; splashText.innerText="Almost..."; }, 4000);
+setTimeout(function(){ splashNum.innerText="WELCOME"; splashNum.style.fontSize="48px"; splashText.innerText="Karibu Sana! Faime Red Luxury"; }, 5000);
+setTimeout(function(){ closeSplash(); }, 6200);
+setTimeout(function(){ closeSplash(); }, 7000);
+
+function getLoc(){
+let sel = document.getElementById("locSelect");
+return {price: parseInt(sel.value), name: sel.options[sel.selectedIndex].getAttribute("data-name")};
+}
+function changeLoc(){
+let loc = getLoc();
+document.getElementById("locName").innerText = loc.name;
+let cards = document.querySelectorAll(".card");
+cards.forEach(function(card){
+let base = parseInt(card.getAttribute("data-base"));
+let total = base + loc.price;
+card.querySelector(".delPrice").innerText = loc.price;
+card.querySelector(".totalPrice").innerText = total.toLocaleString();
+card.querySelector(".btnTotal").innerText = total.toLocaleString();
+card.querySelector(".locShow").innerText = loc.name;
+});
+}
+function orderThis(btn){
+let card = btn.closest(".card");
+let name = card.getAttribute("data-name");
+let base = card.getAttribute("data-base");
+let lx = card.getAttribute("data-lx");
+let loc = getLoc();
+let total = parseInt(base) + loc.price;
+let msg = "Hi Faime Red Luxury! I want to order: Product: " + name + " Order Number: " + lx + " Bei: KSh " + base + " Parcel (" + loc.name + "): KSh " + loc.price + " JUMLA: KSh " + total + " Delivery Done By G4S - Name: Location: " + loc.name + " Please confirm delivery via G4S.";
+window.location.href = "https://wa.me/254729707758?text=" + encodeURIComponent(msg);
+}
+let lastOrderMsg = "";
+function makeOrder(){
+let name = document.getElementById("cname").value;
+let loc = document.getElementById("cloc").value;
+let prod = document.getElementById("cprod").value;
+if(!name || !loc){ alert("Tafadhali jaza jina na location kwanza!"); return; }
+let num = "LX-" + Math.floor(100000 + Math.random()*900000);
+lastOrderMsg = "Hi! My Order Number is " + num + " - " + prod + " - Name: " + name + " - Location: " + loc + " - Delivery by G4S";
+let box = document.getElementById("orderBox");
+box.style.display="block";
+box.innerHTML = "<b>Order Imetengenezwa!</b><br><br>Order Number: <b style='font-size:20px;color:#c00000'>"+num+"</b><br>Jina: "+name+"<br>Location: "+loc+"<br>Bidhaa: "+prod+"<br>Delivery: G4S<br><button class='sendBtn' onclick='sendOrder()'>Tuma Hii Order Kwa WhatsApp</button>";
+}
+function sendOrder(){
+if(!lastOrderMsg){ alert("Tengeneza order kwanza!"); return; }
+window.location.href = "https://wa.me/254729707758?text=" + encodeURIComponent(lastOrderMsg);
+}
+let productsMap = {"LX-206069":"Kids Dress - KSh 1,100","LX-278560":"Black Fur Handbag - KSh 900","LX-305020":"White Fur Handbag - KSh 900","LX-445566":"Colorful Tote Bag - KSh 300","LX-778899":"Throw Pillow Cover - KSh 350"};
+function track(){
+let t = document.getElementById("trackInput").value.trim().toUpperCase();
+if(!t){ alert("Weka Order Number kwanza!"); return; }
+let prod = productsMap[t] || "Your Order";
+let stages = ["Received","Preparing","On Delivery","Delivered"];
+let locs = ["Kabazi - Shop Imetengenezwa","Nakuru Hub - G4S Imepokea Mzigo","Kwa Njia - Mzigo Iko Njiani Na G4S","Imefika Kwako - Delivered"];
+let idx = Math.floor(Math.random()*4);
+let statusText = stages[idx];
+let box = document.getElementById("trackResult");
+box.style.display="block";
+let dotsHtml = "";
+for(let i=0;i<4;i++){
+let cls = i < idx ? "green" : (i==idx ? "gold" : "grey");
+dotsHtml += "<div><div class='dot "+cls+"'></div>"+stages[i]+"</div>";
+}
+box.innerHTML = "<b>Order: "+t+"</b><br>Product: "+prod+"<br><b>Delivery Done By G4S</b><div class='dots'>"+dotsHtml+"</div><b style='color:#c00000'>Status: "+statusText+"</b><br><b>Mzigo Iko Wapi Sasa:</b><br>"+locs[idx]+"<br><br><button class='sendBtn' onclick='askTrack(\""+t+"\")'>Ask on WhatsApp</button><br><small>Delivery via G4S | Nakuru Kabazi</small>";
+}
+function askTrack(t){
+window.location.href = "https://wa.me/254729707758?text=" + encodeURIComponent("Hi! I want to track my order " + t + " - Delivery by G4S");
+}
+</script>
+</body>
+</html>
