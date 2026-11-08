@@ -233,7 +233,7 @@ let base = card.getAttribute("data-base");
 let lx = card.getAttribute("data-lx");
 let loc = getLoc();
 let total = parseInt(base) + loc.price;
-let msg = "Hi Faime Red Luxury! I want to order: Product: " + name + " Order Number: " + lx + " Bei: KSh " + base + " Parcel (" + loc.name + "): KSh " + loc.price + " JUMLA: KSh " + total + " Delivery Done By G4S - Name: Location: " + loc.name + " Please confirm delivery via G4S.";
+let msg = "Hi Faime Red Luxury! I want to order: Product: " + name + " Order Number: " + lx + " Bei: KSh " + base + " Parcel (" + loc.name + "): KSh " + loc.price + " JUMLA: KSh " + total + " Delivery Done By G4S - Name: Location: " + loc.name + " Please confirm delivery via G4S. | Order Time: " + new Date().toLocaleDateString('en-KE',{day:'numeric',month:'long',year:'numeric',timeZone:'Africa/Nairobi'}) + " - " + new Date().toLocaleTimeString('en-KE',{hour:'numeric',minute:'2-digit',timeZone:'Africa/Nairobi'});
 window.location.href = "https://wa.me/254729707758?text=" + encodeURIComponent(msg);
 }
 let lastOrderMsg = "";
