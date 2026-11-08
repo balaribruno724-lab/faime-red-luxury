@@ -89,7 +89,15 @@ footer{text-align:center;padding:16px;font-size:13px;color:#aaa}
 <div id="trackResult"></div>
 <p style="font-size:12px;color:#aaa;margin-top:10px">Delivery Done By G4S | Kabazi - Nakuru - Nairobi - Kenya Mzima</p>
 </div>
-
+<input id="q" placeholder="🔍 Search... Bag, Dress, Ankara..." onkeyup="f()" style="width:100%;padding:12px;border-radius:25px;border:2px solid #d4af37;margin-bottom:10px">
+<script>
+function f(){
+let q=document.getElementById('q').value.toLowerCase();
+document.querySelectorAll('.card').forEach(cd=>{
+cd.style.display=cd.innerText.toLowerCase().includes(q)?'block':'none';
+});
+}
+</script>
 <div class="grid">
 
 <div class="card" data-base="1100" data-lx="LX-206069" data-name="Kids Dress">
