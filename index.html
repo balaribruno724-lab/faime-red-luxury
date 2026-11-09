@@ -1,15 +1,37 @@
+<!-- MAINTENANCE ON / OFF - BADILISHA HAPA TU: true = Imefungwa, false = Shop Inafanya Kazi -->
+<script>let MAINTENANCE = false;</script>
 <div id="splash">
 <div id="splash-num">5</div><div style="color:#d4af37;font-size:22px;letter-spacing:5px;font-weight:700;margin-top:10px;">FAIME RED LUXURY</div>
 </div>
 <style>
 #splash{position:fixed;inset:0;z-index:9999;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
 #splash-num{font-size:110px;font-weight:900;color:#FFD700;text-shadow:0 0 20px #FFD700,0 0 40px #FFA500;margin-top:-20px;font-family:Arial,sans-serif}
+#maintenancePage{display:none;position:fixed;inset:0;z-index:10000;background:#000;color:#fff;text-align:center;padding:40px 20px;overflow-y:auto}
+#maintenancePage h1{color:#d4af37;font-size:26px;line-height:1.4}
+#maintenancePage p{line-height:1.8;font-size:16px;color:#ddd;margin-top:15px}
+.mbtn{display:inline-block;margin-top:25px;background:#25D366;color:white;padding:14px 25px;border-radius:25px;text-decoration:none;font-weight:bold;font-size:16px}
 </style>
 <script>
 let n=5;let el=document.getElementById('splash-num');
 let t=setInterval(()=>{n--;if(n>0){el.textContent=n}else{clearInterval(t);document.getElementById('splash').style.display='none'}},1000);
 setTimeout(()=>{document.getElementById('splash').style.display='none'},5500);
-</script><!DOCTYPE html>
+</script>
+
+<!-- MAINTENANCE PAGE - ENGLISH YA KIBOSS -->
+<div id="maintenancePage">
+<h1>✨ FAIME RED LUXURY ✨</h1>
+<p><b>Dear Valued Customer,</b></p>
+<p>Thank you for visiting <b>Faime Red Luxury.</b></p>
+<p>Our website is currently undergoing scheduled maintenance as we work to improve your shopping experience.</p>
+<p>We are upgrading our systems to serve you better, faster, and with more beautiful collections.</p>
+<p>We sincerely apologize for any inconvenience this may cause.</p>
+<p><b>Our shop is still OPEN.</b><br>You can still place your order directly via WhatsApp, and we will assist you immediately.</p>
+<p>Thank you for your patience, understanding, and continued support.</p>
+<p><b>With Love,<br>Faime Red Luxury Team</b></p>
+<a class="mbtn" href="https://wa.me/254729707758?text=Hi! I want to order">Order via WhatsApp Sasa</a>
+</div>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -18,8 +40,6 @@ setTimeout(()=>{document.getElementById('splash').style.display='none'},5500);
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{background:#000;color:#fff;padding-bottom:20px}
-
-
 header{text-align:center;padding:18px 12px}
 header .top{color:#d4af37;font-size:15px;font-weight:bold}
 header h1{font-size:20px;margin-top:4px}
@@ -285,12 +305,12 @@ window.location.href = "https://wa.me/254729707758?text=" + encodeURIComponent("
 </style>
 
 <script>
-let n = 5;
+let n2 = 5;
 let box = document.getElementById('countdownBox');
 let boxNum = document.getElementById('boxNum');
 let timer = setInterval(function(){
-  n = n - 1;
-  if(n > 0){ boxNum.innerText = n; }
+  n2 = n2 - 1;
+  if(n2 > 0){ boxNum.innerText = n2; }
   else{
     clearInterval(timer);
     box.innerHTML = '<h1 style="color:#d4af37; text-align:center;">FAIME RED<br>LUXURY SHOP<br>COLLECTION</h1><p style="color:white;">Karibu Sana!</p>';
@@ -303,5 +323,13 @@ let timer = setInterval(function(){
 <footer style="text-align:center; padding:20px; background:#000; color:#d4af37;">
   Designed by Bruno ❤️
 </footer>
+
+<script>
+// HII NDIO INA-ON / OFF MAINTENANCE
+if(MAINTENANCE){
+document.getElementById('maintenancePage').style.display='block';
+document.getElementById('splash').style.display='none';
+}
+</script>
 </body>
 </html>
